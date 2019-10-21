@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component type="desktop">
+    <id>org.awesomebump.AwesomeBump</id>
+    <launchable type="desktop-id">org.awesomebump.AwesomeBump.desktop</launchable>
+    <provides>
+        <id>AwesomeBump.desktop</id>
+    </provides>
+    <name>AwesomeBump</name>
+    <summary>Free and open source 3D creation suite</summary>
+    <metadata_license>CC0-1.0</metadata_license>
+    <project_license>GPL-3.0</project_license>
+    <description>
+        <p>
+	AwesomeBump is a free and open source program written using Qt library designed to generate normal, height, specular or ambient occlusion, metallic, roughness textures from a single image. Additional features like material textures or grunge maps are available. Since the image processing is done in 99% on GPU the program runs very fast and all the parameters can be changed in real time. AB was made to be a new alternative to known gimp plugin called Insane Bump or commercial tool: Crazy Bump.
+        </p>
+    </description>
+    <url type="homepage">https://github.com/kmkolasinski/AwesomeBump</url>
+    <url type="help">https://github.com/kmkolasinski/AwesomeBump/wiki</url>
+    <url type="bugtracker">https://github.com/kmkolasinski/AwesomeBump/issues</url>
+    <content_rating type="oars-1.1" />
+    <releases>
+        <release version="5.1" date="2019-09-15">
+            <description>
+                <p>
+Few minor bug fixes were added.
+Batch tool added - for processing multiple similar images in one task.
+                </p>
+            </description>
+        </release>
+  </releases>
+</component>
