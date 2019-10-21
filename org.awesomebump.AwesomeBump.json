@@ -1,0 +1,18 @@
+{
+    "id": "org.awesomebump.AwesomeBump",
+    "runtime": "org.freedesktop.Platform",
+    "runtime-version": "19.08",
+    "sdk": "org.freedesktop.Sdk",
+    "command": "AwesomeBump",
+    "finish-args": [
+        "--share=ipc",
+        "--socket=x11",
+        "--socket=pulseaudio",
+        "--device=dri",
+        "--share=network",
+        "--filesystem=host"
+	],
+    "modules": [
+      	//todo        
+    ]
+}
