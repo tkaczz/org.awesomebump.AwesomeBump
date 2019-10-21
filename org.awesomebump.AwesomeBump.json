@@ -1,9 +1,9 @@
-{
+{ 
     "id": "org.awesomebump.AwesomeBump",
-    "runtime": "org.freedesktop.Platform",
-    "runtime-version": "19.08",
-    "sdk": "org.freedesktop.Sdk",
-    "command": "AwesomeBump",
+    "runtime": "org.kde.Platform",
+    "runtime-version": "5.12",
+    "sdk": "org.kde.Sdk",
+    "command": "AwesomeBump.sh",
     "finish-args": [
         "--share=ipc",
         "--socket=x11",
@@ -11,8 +11,42 @@
         "--device=dri",
         "--share=network",
         "--filesystem=host"
-	],
+    ],
     "modules": [
-      	//todo        
+        {
+            "name": "AwesomeBump",
+            "buildsystem": "qmake",
+            "builddir": true,
+            "post-install": [
+                "mkdir -p /app/opt/ab",
+                "cp -vr ../workdir/linux-g++-gl4/bin/* /app/opt/ab/",
+
+                "mkdir -p /app/share/appdata",
+                "install -m644 -p ../org.awesomebump.AwesomeBump.appdata.xml /app/share/appdata/",
+
+                "mkdir -p /app/bin",                
+                "install -m644 -p ../AwesomeBump.sh /app/bin/",
+                "chmod a+x /app/bin/AwesomeBump.sh"
+            ],
+            "sources": [
+                {
+                    "type":"git",
+                    "branch":"Release",
+                    "url":"https://github.com/kmkolasinski/AwesomeBump.git"
+                },
+                {
+                    "type": "file",
+                    "path": "org.awesomebump.AwesomeBump.appdata.xml"
+                },
+                {
+                    "type": "file",
+                    "path": "AwesomeBump.sh"
+                }
+            ],
+            "cleanup": [
+                /* todo */
+                "/share/doc"
+            ]
+        }
     ]
 }
